@@ -1,0 +1,14 @@
+document.addEventListener("DOMContentLoaded", () =>{
+    const formElement = document.getElementById("transaccion");
+
+    formElement.addEventListener("submit", (event) =>{
+        event.preventDefault();
+        let transaccionDes = document.getElementById("transaccioneDes").value;
+        let transaccionPrecio = document.getElementById("transaccionePrecio").value;
+        let transaccion ={
+            transaccionDes:transaccionDes,
+            transaccionPrecio:transaccionPrecio
+        };
+        let transaccionJson = JSON.stringify(transaccion);
+    });
+});
